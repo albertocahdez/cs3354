@@ -17,7 +17,7 @@ public class StaticNonStatic {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public StaticNonStatic(String name) {
+	public StaticNonStatic(String name) { // non-static context
 		if ( name.length() == 0 ) {
 			name = "NoName";
 		}
