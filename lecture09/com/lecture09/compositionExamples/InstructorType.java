@@ -1,0 +1,11 @@
+package com.lecture09.compositionExamples;
+
+public class InstructorType {
+	private String name;
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getName() {
+		return name;
+	}
+}
