@@ -10,6 +10,7 @@ public class CourseType {
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public CourseType() {
 		instructor = new InstructorType();
 	}
