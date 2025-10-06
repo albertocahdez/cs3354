@@ -48,7 +48,8 @@ public class University {
         uni.showInfo();
 
         University uni2 = new University("Texas University");
-        University.Department course = uni2.new Department("CS");
-        course.showInfo();
+        University.Department department = uni2.new Department("CS");
+        University.Department.Course course = department.new Course("OOP");
+        department.showInfo();
     }
 }
