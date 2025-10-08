@@ -55,7 +55,7 @@ public class StringCollection implements Iterable<String> {
             if (!hasNext()) {
                 throw new NoSuchElementException("No more elements in the collection.");
             }
-            return items[index++];
+            return items[index++];  // return items[index], index++
         }
     }
 
