@@ -5,7 +5,7 @@ import java.util.PriorityQueue;
 public class PriorityQueueMain {
     public static void main(String[] args) {
         // Create a PriorityQueue of integers
-        PriorityQueue<Integer> numbers = new PriorityQueue<>();
+        PriorityQueue<Integer> numbers = new PriorityQueue<Integer>();
 
         // Add elements to the PriorityQueue
         numbers.add(42);
