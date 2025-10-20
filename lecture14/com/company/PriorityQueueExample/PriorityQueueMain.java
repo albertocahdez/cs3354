@@ -8,10 +8,10 @@ public class PriorityQueueMain {
         PriorityQueue<Integer> numbers = new PriorityQueue<Integer>();
 
         // Add elements to the PriorityQueue
-        numbers.add(42);
-        numbers.add(15);
-        numbers.add(27);
-        numbers.add(8);
+        numbers.add(42);    // 42
+        numbers.add(15);    // 15 42
+        numbers.add(27);    // 15 27 42
+        numbers.add(8);     // 8 15 27 42
 
         // Print the PriorityQueue (note: order is not guaranteed)
         System.out.println("PriorityQueue contents: " + numbers);
