@@ -12,7 +12,7 @@ public class BorderLayoutExample {
         // Create a panel for the top row (textbox and button)
         JPanel topPanel = new JPanel(new BorderLayout());
         JTextField textField = new JTextField();
-        textField.setPreferredSize(new Dimension(150, 25)); // Set desired size
+        //textField.setPreferredSize(new Dimension(150, 25)); // Set desired size
         JButton button = new JButton("Submit");
 
         topPanel.add(textField, BorderLayout.WEST);
