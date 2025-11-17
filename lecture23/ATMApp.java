@@ -21,7 +21,6 @@ class ATMApp extends JFrame {
 	public ATMApp(Bank bank) {
 		// setup
 		theATM = new ATM(bank);
-		int state = theATM.getState();
 
 		// JFrame
 		setTitle("ATM");
@@ -138,6 +137,7 @@ class ATMApp extends JFrame {
 			Bank theBank = new Bank();
 			theBank.readCustomers("customers.txt");
 			//theATM = new ATM(theBank);
+			
 			SwingUtilities.invokeLater(() -> new ATMApp(theBank));
 		}
 		catch(IOException e)
