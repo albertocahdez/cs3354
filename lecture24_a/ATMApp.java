@@ -44,6 +44,7 @@ class ATMApp extends JFrame {
 		this.add(topPanel, BorderLayout.PAGE_START);
 		this.add(centerPanel, BorderLayout.CENTER);
 		this.add(bottomPanel, BorderLayout.PAGE_END);
+	
 		setVisible(true);
 	}
 
@@ -82,6 +83,7 @@ class ATMApp extends JFrame {
 			button.addActionListener( e -> { if ( inputBox.getText().length() <= 6 ) inputBox.setText( inputBox.getText() + button.getText() ); } );
 			keyPad.add(button);
 		}
+		 
 		JButton cButton = new JButton("C");
 		cButton.addActionListener( e -> inputBox.setText("") );
 		keyPad.add(cButton);
@@ -147,6 +149,7 @@ class ATMApp extends JFrame {
 		messageBox.setPreferredSize(new Dimension(250, 80));
 		messageBox.setEnabled(false);
 		bottomContainer.add(messageBox);
+		 
 		JPanel buttonsPanel = new JPanel(new FlowLayout(FlowLayout.CENTER));
 		buttonA = new JButton("A");
 		buttonB = new JButton("B");
@@ -218,7 +221,7 @@ class ATMApp extends JFrame {
 		buttonsPanel.add(buttonC);
 
 		setGUIState(ATM.START);
-
+		
 		bottomContainer.add(buttonsPanel);
 		bottomPanel.add(bottomContainer);
 	}
