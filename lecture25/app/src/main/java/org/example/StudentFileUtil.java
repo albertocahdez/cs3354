@@ -9,7 +9,10 @@ public class StudentFileUtil {
 
     public static List<Student> loadStudents() {
         List<Student> list = new ArrayList<>();
-        File file = new File("src/main/resources/" + FILE_NAME);
+        //OLD VERSION File file = new File("src/main/resources/" + FILE_NAME);
+        String filePath = System.getProperty("user.home") + "/" + FILE_NAME;
+        File file = new File(filePath);
+
         if (!file.exists()) return list;
 
         try {
@@ -24,15 +27,18 @@ public class StudentFileUtil {
                     String major = parts[3];
                     list.add(new Student(firstName, lastName, gpa, major));
                 }
-                br.close();
+                
             }
+            br.close();
         } catch (IOException e) { e.printStackTrace(); }
         return list;
     }
 
     public static void saveStudents(List<Student> students) {
-        String resourcePath = "src/main/resources/" + FILE_NAME;
-        try (PrintWriter pw = new PrintWriter(new FileWriter(resourcePath))) {
+        // OLD VERSION String resourcePath = "src/main/resources/" + FILE_NAME;
+        String filePath = System.getProperty("user.home") + "/" + FILE_NAME;
+
+        try (PrintWriter pw = new PrintWriter(new FileWriter(filePath))) {
             for (Student s : students) {
                 pw.println(s.getFirstName() + "," + s.getLastName() + "," + s.getGpa() + "," + s.getMajor());
             }

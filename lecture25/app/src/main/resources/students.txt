@@ -1,2 +1,0 @@
-Marco,Hernandez,3.5,CS
-Mary,Jane,3.5,CS
