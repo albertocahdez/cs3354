@@ -51,9 +51,14 @@ public class TrianglesProgram {
 			//// draw third triangle stars
 			
 			// WRITE YOUR CODE HERE
+			for ( int column = size; column > row; column-- ) {
+				System.out.print("*");
+			}
 
 			// move to next line
 			System.out.println();
 		}
+
+		keyboard.close();
 	}
 }
