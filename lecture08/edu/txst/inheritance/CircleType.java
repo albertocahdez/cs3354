@@ -1,7 +1,7 @@
 package edu.txst.inheritance;
 
 public class CircleType {
-	private double radius;
+	protected double radius;
 
 	public void setRadius(double radius) {
 		this.radius = radius;
