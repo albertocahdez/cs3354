@@ -34,6 +34,7 @@ public class SphereType extends CircleType {
 
 	public static void displayArea(CircleType circle) {
 		System.out.println("Printing area within a method.");
+		// circle.getVolume();
 		System.out.println("Area: " + circle.getArea());
 	}
 }
