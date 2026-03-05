@@ -1,0 +1,8 @@
+Issue: the step counter value is incorrect when the user wins.
+Issue: Moving player on top of a goal erases/moves the goal. Implement the rule that a Player cannot enter into a goal cell.
+Issue: Pushing a box on a goal moves the box and the goal togeter. Implement the rule that a Player cannot enter/move into a box on a goal cell.
+Issue: Determine when a game is over (the player wins) and notify the user. System already checks for gameOver but it is not working.
+Issue: Determine when no box can be moved and notify the user the game has no solution. System already checks for gameStuck but it is not working.
+Issue: Missing documentation for methods and classes in GameEngine.java and SokobanGUI.java
+Issue: Generate javadoc documentation
+Issue: Design 2 additional CSV files with solvable Sokoban levels
