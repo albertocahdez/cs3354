@@ -1,0 +1,9 @@
+Issue: The counter for remaining steps is always zero. Update the text property of the JLabel object by using setText method.
+Note: You do not have to update the JLabel object about coins. You can disregard coin cell type since Coins are not part of this version of the project. 
+Issue: Determine when the player wins (player reaches the exit). System already checks for playerWins but it is not working.
+Issue: Determine when a game is over (the player used all available steps). System already checks for gameOver but it is not working.
+Issue: When the user reaches the map, remove the "hidden value" from all the cells.
+Issue: Missing documentation for methods and classes in GameEngine.java and MazeGUI.java
+Feature: When the user reaches a First Aid Kit, reduce used steps by 10. Used steps cannot be lower than zero.
+Feature: Generate javadoc documentation
+Feature: Design 2 additional CSV files with solvable Maze levels
