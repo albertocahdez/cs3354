@@ -33,6 +33,7 @@ public class StepCounter {
 		if (maxSteps < 1) {
 			maxSteps = 1;
 		}
+		this.maxSteps = maxSteps;
 		currentSteps = 0;
 	}
 }
