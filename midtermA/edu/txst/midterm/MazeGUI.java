@@ -41,6 +41,9 @@ public class MazeGUI extends JFrame {
 					case KeyEvent.VK_LEFT -> engine.movePlayer(0, -1);
 					case KeyEvent.VK_RIGHT -> engine.movePlayer(0, 1);
 				}
+
+				infoPanel.setRemainingSteps(currentBoard.stepCounter.getRemainingSteps());
+
 				gamePanel.repaint();
 
 				// Check for game over
@@ -49,7 +52,6 @@ public class MazeGUI extends JFrame {
 							"Game over! You used all available steps!", "Level Complete",
 							JOptionPane.INFORMATION_MESSAGE);
 
-					// Optional: Disable engine to prevent movement after win
 					engine = null;
 					resetItem.setEnabled(false);
 				}
@@ -59,7 +61,6 @@ public class MazeGUI extends JFrame {
 							"Congratulations! You found the exit.", "Level Complete",
 							JOptionPane.INFORMATION_MESSAGE);
 
-					// Optional: Disable engine to prevent movement after win
 					engine = null;
 					resetItem.setEnabled(false);
 				}
@@ -97,6 +98,8 @@ public class MazeGUI extends JFrame {
 			currentBoard = originalBoard.clone();
 			engine = new GameEngine(currentBoard);
 
+			infoPanel.setRemainingSteps(currentBoard.stepCounter.getRemainingSteps());
+
 			resetItem.setEnabled(true);
 			gamePanel.setBoard(currentBoard);
 			gamePanel.repaint();
@@ -107,6 +110,9 @@ public class MazeGUI extends JFrame {
 		if (originalBoard != null) {
 			currentBoard = originalBoard.clone();
 			engine = new GameEngine(currentBoard);
+
+			infoPanel.setRemainingSteps(currentBoard.stepCounter.getRemainingSteps());
+
 			gamePanel.setBoard(currentBoard);
 			gamePanel.repaint();
 		}
@@ -181,3 +187,5 @@ public class MazeGUI extends JFrame {
 		SwingUtilities.invokeLater(() -> new MazeGUI().setVisible(true));
 	}
 }
+		
+		
