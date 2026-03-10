@@ -1,5 +1,9 @@
 package edu.txst.midterm;
 
+/**
+ * Controls the maze game logic, including player movement,
+ * win conditions, and interactions with special cells.
+ */
 public class GameEngine {
 	private Board board;
 	private int playerRow;
@@ -24,21 +28,38 @@ public class GameEngine {
 	private static final int REMOVE_HIDDEN = 10;
 	private static final int FIRST_AID_KIT_BONUS = 10;
 
-
+	/**
+	 * Creates a new game engine for the given board.
+	 *
+	 * @param board the board used for the maze game
+	 */
 	public GameEngine(Board board) {
 		this.board = board;
 		findPlayer();
 		findExit();
 	}
 
+	/**
+	 * Checks whether the player has reached the exit.
+	 *
+	 * @return true if the player is on the exit cell, false otherwise
+	 */
 	public boolean playerWins() {
-		return false;
+		return playerRow == exitRow && playerCol == exitCol;
 	}
 
+	/**
+	 * Checks whether the game is over because the player has no remaining steps.
+	 *
+	 * @return true if there are no remaining steps, false otherwise
+	 */
 	public boolean isGameOver() {
-		return false;
+		return board.stepCounter.getRemainingSteps() <= 0;
 	}
 
+	/**
+	 * Finds the player's starting position on the board.
+	 */
 	private void findPlayer() {
 		for (int r = 0; r < 5; r++) {
 			for (int c = 0; c < 10; c++) {
@@ -51,6 +72,9 @@ public class GameEngine {
 		}
 	}
 
+	/**
+	 * Finds the exit position on the board.
+	 */
 	private void findExit() {
 		for (int r = 0; r < 5; r++) {
 			for (int c = 0; c < 10; c++) {
@@ -63,15 +87,26 @@ public class GameEngine {
 		}
 	}
 
+	/**
+	 * Reveals all hidden cells on the board.
+	 */
 	private void removeHidden() {
+		for (int r = 0; r < 5; r++) {
+			for (int c = 0; c < 10; c++) {
+				int cell = board.getCell(r, c);
 
+				if (cell >= HIDDEN_FLOOR && cell <= HIDDEN_EXIT) {
+					board.setCell(r, c, cell - REMOVE_HIDDEN);
+				}
+			}
+		}
 	}
 
 	/**
-	 * Attempts to move the player.
-	 * 
-	 * @param dRow Change in row (-1, 0, 1)
-	 * @param dCol Change in column (-1, 0, 1)
+	 * Attempts to move the player by the given row and column change.
+	 *
+	 * @param dRow change in row
+	 * @param dCol change in column
 	 */
 	public void movePlayer(int dRow, int dCol) {
 		int targetRow = playerRow + dRow;
@@ -80,7 +115,7 @@ public class GameEngine {
 
 		// 1. Check for Walls or Out of Bounds
 		if (targetCell == WALL || targetCell == -1) {
-			return; // Movement blocked
+			return;
 		}
 
 		if (targetCell == HIDDEN_WALL) {
@@ -89,8 +124,9 @@ public class GameEngine {
 		}
 
 		// 2. Check for Map
-		if (targetCell == HIDDEN_MAP) {
+		if (targetCell == MAP || targetCell == HIDDEN_MAP) {
 			removeHidden();
+			targetCell = board.getCell(targetRow, targetCol);
 		}
 
 		// 3. Check for First Aid Kit
@@ -102,9 +138,6 @@ public class GameEngine {
 		}
 
 		// 4. Move the Player
-		// Current position becomes Floor (or Goal if player was standing on one)
-		// Note: For simplicity, this engine assumes player replaces the cell.
-		// If you want "Player on Goal", you'd add a 6th constant.
 		board.setCell(playerRow, playerCol, FLOOR);
 
 		playerRow = targetRow;
