@@ -1,4 +1,4 @@
-package com.company.TryCatchExamples;
+package edu.txst.TryCatchExamples;
 
 import java.util.Scanner;
 
