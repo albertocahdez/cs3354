@@ -15,4 +15,4 @@ public class AssertionExample {
 
         System.out.println("This line will not be printed if assertions are enabled.");
     }
-} 
+}
