@@ -1,0 +1,4 @@
+You have a data service that fetches objects from a repository. You want to add cross-cutting
+features—caching, logging, retry—incrementally and combinably without changing the core
+service.
+What pattern would best support this?

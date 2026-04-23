@@ -1,0 +1,3 @@
+Your app calculates shipping costs with diﬀerent policies—flat rate, weight-based, distance-
+based, carrier-specific—chosen dynamically per order.
+What pattern would best support this?

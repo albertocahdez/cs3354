@@ -55,12 +55,17 @@ public class StudentApp extends JFrame {
         JTextField majorField = new JTextField();
 
         JPanel panel = new JPanel(new GridLayout(4, 2));
-        panel.add(new JLabel("First Name:")); panel.add(firstNameField);
-        panel.add(new JLabel("Last Name:")); panel.add(lastNameField);
-        panel.add(new JLabel("GPA:")); panel.add(gpaField);
-        panel.add(new JLabel("Major:")); panel.add(majorField);
+        panel.add(new JLabel("First Name:"));
+        panel.add(firstNameField);
+        panel.add(new JLabel("Last Name:"));
+        panel.add(lastNameField);
+        panel.add(new JLabel("GPA:"));
+        panel.add(gpaField);
+        panel.add(new JLabel("Major:"));
+        panel.add(majorField);
 
-        int result = JOptionPane.showConfirmDialog(this, panel, "New Student", JOptionPane.OK_CANCEL_OPTION);
+        int result = JOptionPane.showConfirmDialog(this, panel, "New Student",
+                JOptionPane.OK_CANCEL_OPTION);
         if (result == JOptionPane.OK_OPTION) {
             Student s = new Student(firstNameField.getText(), lastNameField.getText(),
                     Double.parseDouble(gpaField.getText()), majorField.getText());
@@ -83,10 +88,14 @@ public class StudentApp extends JFrame {
         majorField.setEnabled(false);
 
         JPanel panel = new JPanel(new GridLayout(4, 2));
-        panel.add(new JLabel("First Name:")); panel.add(firstNameField);
-        panel.add(new JLabel("Last Name:")); panel.add(lastNameField);
-        panel.add(new JLabel("GPA:")); panel.add(gpaField);
-        panel.add(new JLabel("Major:")); panel.add(majorField);
+        panel.add(new JLabel("First Name:"));
+        panel.add(firstNameField);
+        panel.add(new JLabel("Last Name:"));
+        panel.add(lastNameField);
+        panel.add(new JLabel("GPA:"));
+        panel.add(gpaField);
+        panel.add(new JLabel("Major:"));
+        panel.add(majorField);
 
         JDialog dialog = new JDialog(this, "Student Details", true);
         dialog.setLayout(new BorderLayout());

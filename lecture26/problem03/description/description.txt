@@ -1,0 +1,3 @@
+In Java I/O, you want to extend a base InputStream with additional responsibilities like
+buﬀering, encryption, and compression, without creating a deep subclass hierarchy.
+What pattern would best support this?

@@ -9,11 +9,12 @@ public class StudentFileUtil {
 
     public static List<Student> loadStudents() {
         List<Student> list = new ArrayList<>();
-        //OLD VERSION File file = new File("src/main/resources/" + FILE_NAME);
+        // OLD VERSION File file = new File("src/main/resources/" + FILE_NAME);
         String filePath = System.getProperty("user.home") + "/" + FILE_NAME;
         File file = new File(filePath);
 
-        if (!file.exists()) return list;
+        if (!file.exists())
+            return list;
 
         try {
             BufferedReader br = new BufferedReader(new FileReader(file));
@@ -27,10 +28,12 @@ public class StudentFileUtil {
                     String major = parts[3];
                     list.add(new Student(firstName, lastName, gpa, major));
                 }
-                
+
             }
             br.close();
-        } catch (IOException e) { e.printStackTrace(); }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return list;
     }
 
@@ -40,8 +43,12 @@ public class StudentFileUtil {
 
         try (PrintWriter pw = new PrintWriter(new FileWriter(filePath))) {
             for (Student s : students) {
-                pw.println(s.getFirstName() + "," + s.getLastName() + "," + s.getGpa() + "," + s.getMajor());
+                pw.println(s.getFirstName() + "," + s.getLastName() + "," + s.getGpa() + ","
+                        + s.getMajor());
             }
-        } catch (IOException e) { e.printStackTrace(); }
+            pw.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -1,0 +1,4 @@
+A legacy system logs data using an XML format with LegacyXmlLogger, while your new app
+expects a JsonLogger. You need an integration layer that makes the legacy logger look like
+the new one.
+What pattern would best support this?
