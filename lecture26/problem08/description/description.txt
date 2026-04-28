@@ -1,0 +1,3 @@
+A media player manages playlists that can be built from local files, cloud tracks, and live
+streams. You want to traverse each playlist sequence without knowing how it stores its items.
+What pattern would best support this?

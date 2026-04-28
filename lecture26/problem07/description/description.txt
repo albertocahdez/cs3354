@@ -1,0 +1,4 @@
+You have multiple collections in a Java library system—ArrayList<Book>,
+LinkedList<Member>, and a custom Shelf class. You need a uniform way to traverse all of
+them without exposing their internal structures.
+What pattern would best support this?

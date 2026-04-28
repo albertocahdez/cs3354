@@ -1,0 +1,4 @@
+Your image editor expects a VectorShape interface, but you must import shapes from a
+bitmap-oriented library. You need a bridge that converts bitmap operations to vector-like
+operations.
+What pattern would best support this?
