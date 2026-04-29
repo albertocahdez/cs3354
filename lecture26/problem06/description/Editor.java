@@ -1,3 +1,5 @@
+package problem06.description;
+
 public class Editor {
 	public static void main(String[] args) {
 		BitmapImage bitmap = new BitmapImage();

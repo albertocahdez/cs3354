@@ -1,3 +1,5 @@
+package problem06.solution;
+
 public class ModernEditor {
 	public static void main(String[] args) {
 		// 1. The legacy bitmap object

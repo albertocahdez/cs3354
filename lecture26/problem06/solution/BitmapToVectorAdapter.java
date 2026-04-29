@@ -1,3 +1,5 @@
+package problem06.solution;
+
 public class BitmapToVectorAdapter implements VectorShape {
 	private BitmapImage bitmapImage;
 	private int colorCode;
