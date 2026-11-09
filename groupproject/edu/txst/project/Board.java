@@ -1,4 +1,4 @@
-package edu.txst.midterm;
+package edu.txst.project;
 
 public class Board implements Cloneable {
 	private final int COLUMNS = 10;

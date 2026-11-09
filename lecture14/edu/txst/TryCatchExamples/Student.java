@@ -19,9 +19,13 @@ public class Student {
 	}
 
 	public void setGpa(double gpa) throws InvalidValueException {
-		if (gpa < 0.0 || gpa > 4.0)
-			throw new InvalidValueException("GPA contains an invalid value.");
-		this.gpa = gpa;
+		if (gpa >= 0 && gpa <= 4) {
+			// the object's attribute gpa
+			this.gpa = gpa;
+			// the input parameter gpa
+		} else {
+			throw new InvalidValueException("Invalid GPA.");
+		}
 	}
 
 	public void setMajor(String major) throws InvalidValueException {

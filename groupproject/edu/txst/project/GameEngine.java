@@ -1,4 +1,4 @@
-package edu.txst.midterm;
+package edu.txst.project;
 
 public class GameEngine {
 	private Board board;
@@ -13,7 +13,6 @@ public class GameEngine {
 	private static final int COIN = 2;
 	private static final int EXIT = 5;
 	private static final int PLAYER = 6;
-
 
 	public GameEngine(Board board) {
 		this.board = board;

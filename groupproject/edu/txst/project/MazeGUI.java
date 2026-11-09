@@ -1,4 +1,4 @@
-package edu.txst.midterm;
+package edu.txst.project;
 
 import javax.swing.*;
 import java.awt.*;
@@ -112,12 +112,14 @@ public class MazeGUI extends JFrame {
 		public InfoPanel() {
 			this.setLayout(new FlowLayout());
 			this.add(new JLabel("Steps: "));
-			// infoRemainingSteps is a label which value can be changed using its method called
+			// infoRemainingSteps is a label which value can be changed using its method
+			// called
 			// setText
 			infoSteps = new JLabel("0");
 			this.add(infoSteps);
 			this.add(new JLabel("Coins: "));
-			// infoCoins is a label which value can be changed using its method called setText
+			// infoCoins is a label which value can be changed using its method called
+			// setText
 			infoCoins = new JLabel("0");
 			this.add(infoCoins);
 		}

@@ -7,6 +7,7 @@ public class BorderLayoutExample {
         JFrame frame = new JFrame("BorderLayout Example");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(250, 100);
+
         frame.setLayout(new BorderLayout());
 
         // Create a panel for the top row (textbox and button)

@@ -1,4 +1,4 @@
-package edu.txst.midterm;
+package edu.txst.project;
 
 public class StepCounter {
 	private int steps;

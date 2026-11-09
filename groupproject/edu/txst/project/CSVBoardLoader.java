@@ -1,4 +1,4 @@
-package edu.txst.midterm;
+package edu.txst.project;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
