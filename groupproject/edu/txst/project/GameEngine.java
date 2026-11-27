@@ -112,7 +112,9 @@ public class GameEngine {
 
         boolean[][] visited = new boolean[6][10];
 
-        while (!playerWins() && isConveyor(playerPreviousCell)) {
+       for (int beltMove = 0; beltMove < 1 && !playerWins()
+        && isConveyor(playerPreviousCell); beltMove++)
+        {
 
             visited[playerRow][playerCol] = true;
 
