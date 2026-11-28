@@ -36,12 +36,26 @@ public class MazeGUI extends JFrame {
 					return;
 
 				switch (e.getKeyCode()) {
-					case KeyEvent.VK_UP -> engine.movePlayer(-1, 0);
-					case KeyEvent.VK_DOWN -> engine.movePlayer(1, 0);
-					case KeyEvent.VK_LEFT -> engine.movePlayer(0, -1);
-					case KeyEvent.VK_RIGHT -> engine.movePlayer(0, 1);
+					case KeyEvent.VK_UP -> {
+						engine.movePlayer(-1, 0);
+						stepCounter++;
+					}
+					case KeyEvent.VK_DOWN -> {
+						engine.movePlayer(1, 0);
+						stepCounter++;
+					}
+					case KeyEvent.VK_LEFT -> {
+						engine.movePlayer(0, -1);
+						stepCounter++;
+					}
+					case KeyEvent.VK_RIGHT -> {
+						engine.movePlayer(0, 1);
+						stepCounter++;
+					}
 				}
 				gamePanel.repaint();
+				infoPanel.setInfoSteps(stepCounter);
+				infoPanel.setInfoCoins(engine.getCoins());
 
 				// Check for victory
 				if (engine.playerWins()) {

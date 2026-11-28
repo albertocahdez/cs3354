@@ -13,9 +13,9 @@ score = steps * -1 + coins * 5
 
 Fix the following bugs and complete the required standard features:
 
-* Fix Step Counter: The step counter stays at zero. Update the text property of the corresponding JLabel using setText().
+* Fix Step Counter: The step counter stays at zero. Update the text property of the corresponding JLabel using setText(). (DONE)
 
-* Fix Coin Counter: The coin counter stays at zero. Update the text property of the corresponding JLabel using setText().
+* Fix Coin Counter: The coin counter stays at zero. Update the text property of the corresponding JLabel using setText(). (DONE)
 
 * Fix Win Condition: The engine checks playerWins, but win detection fails. Fix logic so the game detects when the player reaches the goal.
 
