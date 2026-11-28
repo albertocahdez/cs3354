@@ -55,18 +55,19 @@ public class GameEngine {
 
 	/**
 	 * Attempts to move the player.
+	 * true indicates success, false indicates failure
 	 * 
 	 * @param dRow Change in row (-1, 0, 1)
 	 * @param dCol Change in column (-1, 0, 1)
 	 */
-	public void movePlayer(int dRow, int dCol) {
+	public boolean movePlayer(int dRow, int dCol) {
 		int targetRow = playerRow + dRow;
 		int targetCol = playerCol + dCol;
 		int targetCell = board.getCell(targetRow, targetCol);
 
 		// Check for Walls or Out of Bounds
 		if (targetCell == WALL || targetCell == -1) {
-			return; // Movement blocked
+			return false; // Movement blocked
 		}
 
 		// Check for coins
@@ -83,6 +84,8 @@ public class GameEngine {
 		playerRow = targetRow;
 		playerCol = targetCol;
 		board.setCell(playerRow, playerCol, PLAYER);
+
+		return true;
 
 	}
 }

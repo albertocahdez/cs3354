@@ -32,25 +32,27 @@ public class MazeGUI extends JFrame {
 		addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
+				boolean moveSuccess;
+
 				if (engine == null)
 					return;
 
 				switch (e.getKeyCode()) {
 					case KeyEvent.VK_UP -> {
-						engine.movePlayer(-1, 0);
-						stepCounter++;
+						moveSuccess = engine.movePlayer(-1, 0);
+						if(moveSuccess)stepCounter++;
 					}
 					case KeyEvent.VK_DOWN -> {
-						engine.movePlayer(1, 0);
-						stepCounter++;
+						moveSuccess = engine.movePlayer(1, 0);
+						if(moveSuccess)stepCounter++;
 					}
 					case KeyEvent.VK_LEFT -> {
-						engine.movePlayer(0, -1);
-						stepCounter++;
+						moveSuccess = engine.movePlayer(0, -1);
+						if(moveSuccess)stepCounter++;
 					}
 					case KeyEvent.VK_RIGHT -> {
-						engine.movePlayer(0, 1);
-						stepCounter++;
+						moveSuccess = engine.movePlayer(0, 1);
+						if(moveSuccess)stepCounter++;
 					}
 				}
 				gamePanel.repaint();
