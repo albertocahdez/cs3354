@@ -1,4 +1,4 @@
-package edu.txst.project;
+package mazeGame;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

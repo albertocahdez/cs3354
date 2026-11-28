@@ -1,4 +1,4 @@
-package edu.txst.project;
+package mazeGame;
 
 public class Board implements Cloneable {
 	private final int COLUMNS = 10;

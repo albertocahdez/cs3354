@@ -1,4 +1,4 @@
-package edu.txst.project;
+package mazeGame;
 
 public class GameEngine {
 	private Board board;

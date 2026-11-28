@@ -1,4 +1,4 @@
-package edu.txst.project;
+package mazeGame;
 
 import javax.swing.*;
 import java.awt.*;

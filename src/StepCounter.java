@@ -1,4 +1,4 @@
-package edu.txst.project;
+package mazeGame;
 
 public class StepCounter {
 	private int steps;
